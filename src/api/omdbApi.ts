@@ -1,5 +1,5 @@
-const API_KEY = import.meta.env.REACT_APP_OMDB_API_KEY || "e6bcb153";
-const BASE_URL = import.meta.env.REACT_APP_OMDB_BASE_URL || "http://www.omdbapi.com/";
+const API_KEY = "e6bcb153";
+const BASE_URL = "http://www.omdbapi.com/";
 
 // ? fungsi untuk mencari film berdasarkan judul
 export const searchMovieByTitle = async (query:string) => {
