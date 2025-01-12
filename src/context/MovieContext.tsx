@@ -5,7 +5,7 @@ import { createContext, useContext, useState } from "react"
 interface Movie {
     Title: string
     Year: string
-    Posters: string
+    Poster: string
     imdbID: string
 }
 
