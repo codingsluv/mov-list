@@ -1,9 +1,9 @@
 import { MovieCardProps } from "@/types/movie";
 import { Card } from "../ui/card";
 
-export default function MovieCard({movie}:MovieCardProps) {
+export default function MovieCard({movie, onClick}:MovieCardProps) {
   return (
-    <Card className="flex flex-col items-center justify-center space-y-4 p-4 bg-gray-200 rounded-lg shadow-md cursor-pointer hover:shadow-lg">
+    <Card onClick={onClick} className="flex flex-col items-center justify-center space-y-4 p-4 bg-gray-200 rounded-lg shadow-md cursor-pointer hover:shadow-lg">
       <div className="flex flex-col items-center justify-center space-y-4 p-4">
         <img
           src={movie.Posters}

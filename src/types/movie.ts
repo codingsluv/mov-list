@@ -5,4 +5,5 @@ export type MovieCardProps = {
         Posters: string
         imdbID: string
     }
+    onClick: () => void
 }
