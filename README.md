@@ -1,50 +1,67 @@
-# React + TypeScript + Vite
+# Movie Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Movie Finder is a web application that allows users to search for movies and view detailed information about them. The app utilizes the OMDB API to fetch movie data and display it in a user-friendly interface.
 
-Currently, two official plugins are available:
+## Features
+- **Search Movies**: Users can search for movies by title.
+- **Movie List**: Displays a list of movies based on the search query.
+- **Movie Details**: Clicking on a movie shows detailed information, including the poster, plot, genre, director, actors, and IMDb rating.
+- **Responsive Design**: The app is responsive and works well on different devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- **React**: For building the user interface.
+- **TypeScript**: For type-safe JavaScript.
+- **Tailwind CSS**: For styling the application.
+- **OMDB API**: For fetching movie data.
 
-## Expanding the ESLint configuration
+## Setup and Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/movie-finder.git
+   cd movie-finder
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. **Set up environment variables**:
+   - Create a `.env` file in the root of your project.
+   - Add your OMDB API key:
+     ```
+     REACT_APP_OMDB_API_KEY=your_api_key_here
+     ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+4. **Run the application**:
+   ```bash
+   npm start
+   ```
+   The app will be available at `http://localhost:3000`.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Usage
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Enter a movie title in the search bar and click the search button.
+2. Browse the list of movies matching your search query.
+3. Click on a movie card to view more details.
+4. Use the close button to return to the movie list.
+
+## Screenshots
+
+### Home Page
+![Home Page](public/home.png)
+
+### Movie List
+![Movie List](public/search.png)
+
+### Movie Modal
+![Movie Modal](public/modal.png)
+
+## Credits
+- [OMDB API](http://www.omdbapi.com/) for providing movie data.
+- Created by **codingsluv**.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
