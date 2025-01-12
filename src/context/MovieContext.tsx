@@ -14,12 +14,12 @@ interface MovieDetail extends Movie {
     Genre: string
     Actors: string
     Director: string
-    ImdbRating: string
+    imdbRating: string
 }
 
 interface MovieContextType {
     movies: Movie[]
-    selectedMovie: MovieDetail | null
+    selectedMovie: MovieDetail | null // null jika belum ada movie terpilih
     searchMovies: (query:string) => Promise<void>
     selectMovie: (query:string) => Promise<void>
     closeMovieModal: () => void
@@ -42,7 +42,7 @@ export const MovieProvider = ({children}:MovieProviderProps) => {
 
     const selectMovieHandler = async (id:string) => {
         const result = await searcDetailhMovieByID(id)
-        setSelectedMovie(result[0] || null)
+        setSelectedMovie(result || null)
     }
 
     const closeMovieModal = () => {
